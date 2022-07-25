@@ -14,7 +14,7 @@ class ProductsFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition() 
     {
         $rand_num = random_int(1,40);
         return [
@@ -24,7 +24,8 @@ class ProductsFactory extends Factory
             'category_id'=>$this->getRandomCategory()
         ];
     }
-    public function getRandomCategory(){
+    public function getRandomCategory() ## to get random id from category
+    {
         $data = Category::get();
         $arr = [];
         foreach($data as $item){
