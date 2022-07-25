@@ -17,10 +17,16 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
+                @if (Auth::check())
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('product') }}">{{ __('mylang.products') }}</a>
+                </li>
+                @endif
+                
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('mylang.login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('mylang.loginn') }}</a>
                         </li>
                     @endif
 
@@ -60,6 +66,7 @@
                     @endforeach
                     </div>
                 </li>
+
             </ul>
             
         </div>

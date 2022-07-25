@@ -2,8 +2,9 @@
 
 return [
 
+    'products'=>'Products',
     'logout'=>'Logout',
-    'login'=>'Login',
+    'loginn'=>'Login',
     'register'=>'Register',
     'Arabic'=>'arabic',
     'English'=>'english',
